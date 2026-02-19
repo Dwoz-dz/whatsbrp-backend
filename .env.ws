@@ -1,0 +1,3 @@
+﻿WS_URL="http://127.0.0.1:3000"
+TOKEN="PASTE_REAL_TOKEN_HERE"
+CONV_ID="cmlpasz8p00087wkg3ptcatnz"

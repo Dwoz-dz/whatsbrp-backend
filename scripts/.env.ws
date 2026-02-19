@@ -1,0 +1,4 @@
+﻿WS_URL=http://127.0.0.1:3000
+WS_PATH=/socket.io
+TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWxwYXN6MDkwMDA2N3drZzdlcGtzZGNlIiwiZW1haWwiOiJ6MUBicnAuY29tIiwiaWF0IjoxNzcxMzcwODMxLCJleHAiOjE3NzE5NzU2MzF9.1eK7nTBED70hjaXYxtltKPGqnIPSBj6rQVvMjScFUSw
+CONV_ID=cmlpasz8p00087wkg3ptcatnz
