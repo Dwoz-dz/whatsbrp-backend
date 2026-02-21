@@ -22,6 +22,21 @@ let AdminService = class AdminService {
     approveUser(id) {
         return this.users.approveUser(id);
     }
+    // ✅ NEW: list latest users (for admin tooling)
+    async listUsers() {
+        return this.prisma.user.findMany({
+            orderBy: { createdAt: 'desc' },
+            take: 20,
+            select: {
+                id: true,
+                email: true,
+                fullName: true,
+                status: true,
+                createdAt: true,
+                updatedAt: true,
+            },
+        });
+    }
     async createConversation(body) {
         const type = (body.type ?? 'DM');
         const memberIds = Array.from(new Set(body.memberIds ?? [])).filter(Boolean);
@@ -58,7 +73,6 @@ let AdminService = class AdminService {
                 },
                 select: { id: true, _count: { select: { members: true } } },
             });
-            // لازم تكون exactly 2 members
             if (existing?.id && existing._count.members === 2) {
                 return this.prisma.conversation.findUnique({
                     where: { id: existing.id },

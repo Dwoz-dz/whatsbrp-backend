@@ -6,6 +6,14 @@ export declare class AdminController {
         received: string | null;
         expectedExists: boolean;
     };
+    listUsers(): Promise<{
+        id: string;
+        email: string;
+        fullName: string | null;
+        status: import(".prisma/client").$Enums.UserStatus;
+        createdAt: Date;
+        updatedAt: Date;
+    }[]>;
     approve(id: string): import(".prisma/client").Prisma.Prisma__UserClient<{
         id: string;
         email: string;

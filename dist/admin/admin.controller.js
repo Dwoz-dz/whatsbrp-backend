@@ -27,6 +27,10 @@ let AdminController = class AdminController {
             expectedExists: !!process.env.ADMIN_KEY,
         };
     }
+    // ✅ NEW: list users (latest 20)
+    listUsers() {
+        return this.admin.listUsers();
+    }
     // approve user
     approve(id) {
         return this.admin.approveUser(id);
@@ -48,6 +52,12 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], AdminController.prototype, "ping", null);
+__decorate([
+    (0, common_1.Get)('users'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AdminController.prototype, "listUsers", null);
 __decorate([
     (0, common_1.Post)('users/:id/approve'),
     __param(0, (0, common_1.Param)('id')),

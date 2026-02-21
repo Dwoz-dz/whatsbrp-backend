@@ -28,8 +28,8 @@ export declare class ConversationsService {
                 userId: string;
                 messageId: string;
             }[];
-            text: string;
             senderId: string;
+            text: string;
         };
     }[]>;
     listMessages(conversationId: string, userId: string, limit?: number, cursor?: string): Promise<{
@@ -43,9 +43,9 @@ export declare class ConversationsService {
                 messageId: string;
             }[];
             conversationId: string;
+            senderId: string;
             clientMsgId: string;
             text: string;
-            senderId: string;
         }[];
         nextCursor: string | null;
     }>;

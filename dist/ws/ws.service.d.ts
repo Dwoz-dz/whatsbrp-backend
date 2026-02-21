@@ -23,9 +23,9 @@ export declare class WsService {
                 messageId: string;
             }[];
             conversationId: string;
+            senderId: string;
             clientMsgId: string;
             text: string;
-            senderId: string;
         };
     }>;
     /**

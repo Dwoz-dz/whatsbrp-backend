@@ -13,6 +13,14 @@ export declare class AdminService {
         createdAt: Date;
         updatedAt: Date;
     }, never, import("@prisma/client/runtime/library").DefaultArgs>;
+    listUsers(): Promise<{
+        id: string;
+        email: string;
+        fullName: string | null;
+        status: import(".prisma/client").$Enums.UserStatus;
+        createdAt: Date;
+        updatedAt: Date;
+    }[]>;
     createConversation(body: {
         type?: 'DM' | 'GROUP';
         title?: string;

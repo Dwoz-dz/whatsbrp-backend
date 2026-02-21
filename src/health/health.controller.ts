@@ -15,8 +15,11 @@ export class HealthController {
     try {
       await this.prisma.$queryRaw`SELECT 1`;
       return { db: 'connected' };
-    } catch (error) {
-      return { db: 'error', message: (error && error.message) ? error.message : 'unknown' };
+    } catch (error: any) {
+      return {
+        db: 'error',
+        message: error?.message || 'unknown',
+      };
     }
   }
 }

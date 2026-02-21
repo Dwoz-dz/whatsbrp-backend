@@ -26,8 +26,8 @@ export declare class ConversationsController {
                 userId: string;
                 messageId: string;
             }[];
-            text: string;
             senderId: string;
+            text: string;
         };
     }[]>;
     listMessages(req: any, conversationId: string, limit?: string, cursor?: string): Promise<{
@@ -41,9 +41,9 @@ export declare class ConversationsController {
                 messageId: string;
             }[];
             conversationId: string;
+            senderId: string;
             clientMsgId: string;
             text: string;
-            senderId: string;
         }[];
         nextCursor: string | null;
     }>;

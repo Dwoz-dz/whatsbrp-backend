@@ -24,6 +24,12 @@ export class AdminController {
     };
   }
 
+  // ✅ NEW: list users (latest 20)
+  @Get('users')
+  listUsers() {
+    return this.admin.listUsers();
+  }
+
   // approve user
   @Post('users/:id/approve')
   approve(@Param('id') id: string) {

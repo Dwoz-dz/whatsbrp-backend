@@ -51,11 +51,11 @@ export declare class WsGateway implements OnGatewayConnection, OnGatewayDisconne
         ok: boolean;
         data: {
             id: string;
-            clientMsgId: string;
-            text: string;
             createdAt: Date;
             conversationId: string;
             senderId: string;
+            clientMsgId: string;
+            text: string;
         };
     }>;
     onTyping(client: Socket, body: {
