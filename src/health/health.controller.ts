@@ -1,9 +1,9 @@
-import { Controller, Get } from '@nestjs/common';
-import { DataSource } from 'typeorm';
+﻿import { Controller, Get } from '@nestjs/common';
+import { PrismaService } from '../prisma/prisma.service';
 
-@Controller()
+@Controller('health')
 export class HealthController {
-  constructor(private readonly dataSource: DataSource) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   @Get('ping')
   ping() {
@@ -13,10 +13,10 @@ export class HealthController {
   @Get('db-test')
   async dbTest() {
     try {
-      await this.dataSource.query('SELECT 1');
+      await this.prisma.$queryRaw`SELECT 1`;
       return { db: 'connected' };
-    } catch (error: any) {
-      return { db: 'error', message: error?.message ?? 'unknown error' };
+    } catch (error) {
+      return { db: 'error', message: (error && error.message) ? error.message : 'unknown' };
     }
   }
 }
