@@ -1,1 +1,0 @@
-{"version":3,"file":"ws.adapter.js","sourceRoot":"","sources":["../../src/ws/ws.adapter.ts"],"names":[],"mappings":";;AAGA,wCAKC;AARD,2CAA0D;AAC1D,mEAAuD;AAEvD,SAAgB,cAAc,CAAC,GAAqB;IAClD,6BAA6B;IAC7B,GAAG,CAAC,mBAAmB,CAAC,IAAI,8BAAS,CAAC,GAAG,CAAC,CAAC,CAAC;IAE5C,eAAM,CAAC,GAAG,CAAC,oCAAoC,EAAE,IAAI,CAAC,CAAC;AACzD,CAAC"}
